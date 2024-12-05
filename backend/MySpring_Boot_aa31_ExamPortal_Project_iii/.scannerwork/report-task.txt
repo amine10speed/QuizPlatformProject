@@ -1,0 +1,7 @@
+organization=quiz-g6
+projectKey=com:MySpring_Boot_aa31_ExamPortal_Project_iii
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.58741
+dashboardUrl=https://sonarcloud.io/dashboard?id=com%3AMySpring_Boot_aa31_ExamPortal_Project_iii
+ceTaskId=AZPpVS7wtVs9uHzNe5bX
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZPpVS7wtVs9uHzNe5bX
