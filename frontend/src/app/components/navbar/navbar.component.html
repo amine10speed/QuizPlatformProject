@@ -1,0 +1,31 @@
+<mat-toolbar id="navbar" class="color_navbar">
+  <a id="homeLogo" [routerLink]="'/'" md-fab mat-button>
+      <img src="../../../assets/logo.jpg" height="60px" class="round-image">
+  </a>
+  
+  <a *ngIf="!loggedIn" id="examPortalGuest" [routerLink]="'/'" mat-icon-button>
+      Exam Portal
+  </a>
+
+  <a *ngIf="loggedIn" id="examPortalUser" [routerLink]="'/userdashboard'" mat-icon-button>
+      Exam Portal
+  </a>
+  
+  <span id="navbarSpacer" class="example-spacer"></span>
+  
+  <a *ngIf="!loggedIn" id="NavloginButton" [routerLink]="'/login'" mat-icon-button class="example-icon mr30">
+      Login
+  </a>
+  
+  <a *ngIf="!loggedIn" id="NavregisterButton" [routerLink]="'/signup'" mat-icon-button class="example-icon mr60">
+      Register
+  </a>
+
+  <a *ngIf="loggedIn" id="welcomeMessage" [routerLink]="this.admorusr+'dashboard/profile'" mat-icon-button class="example-icon mr170">
+      Welcome {{uname}}
+  </a>
+
+  <a *ngIf="loggedIn" id="logoutButton" (click)="logoutUser()" mat-icon-button class="example-icon mr60">
+      Logout
+  </a>
+</mat-toolbar>
