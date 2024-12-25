@@ -1,0 +1,30 @@
+mat-card-content h1{
+    font-size: 16px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    color: #8B4513;
+}
+
+.delete{
+    background-color: brown;
+    color: white;
+  }
+
+  .no_data{
+    font-weight: bold;
+    font-size: 20px;
+    color: #8B4513;
+}
+
+.top{
+    margin-top: 100px;
+}
+
+.result{
+    font-weight: bold;
+    font-size: 20px;
+    color: #8B4513;
+}

@@ -1,0 +1,45 @@
+.image_container {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ajout de la position relative */
+}
+
+.image_container img {
+    height: 100px;
+    border-radius: 30%;
+    position: relative; /* L'image reste en place à gauche */
+}
+
+.btn_add {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 25px 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute; /* Position absolue */
+    right: 5%; /* Le bouton est aligné à droite */
+    top: 50%; /* Le bouton est centré verticalement */
+    transform: translateY(-50%); /* Ajuste le centrage vertical */
+}
+
+.btn_add:hover {
+    background-color: #8B4513;
+}
+
+.delete{
+    background-color: brown;
+    color: white;
+  }
+
+  .update{
+    background-color: rgb(223, 126, 0);
+    color: white;
+  }

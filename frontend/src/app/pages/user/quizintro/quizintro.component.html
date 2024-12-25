@@ -1,0 +1,63 @@
+<div id="instructionsContainer" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card id="instructionsCard" class="mt20">
+
+                <mat-card-header>
+                    <!-- heading -->
+                    <mat-card-title id="instructionsTitle">
+                        Quiz Instructions:
+                    </mat-card-title>
+
+                    <mat-card-subtitle id="instructionsSubtitle">
+                        One step more to go
+                    </mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <!-- content -->
+                    <br>
+                    <h1 id="quizHeader">
+                        <img id="quizImage" [src]="quiz.imagefile" height="60px"> {{quiz.title}}
+                    </h1>
+                    <p id="quizDescription" [innerHTML]="quiz.description"></p>
+
+                    <mat-divider id="divider1"></mat-divider>
+                    <br>
+                    <h3 id="importantInstructionsHeader">Important Instructions</h3>
+                    <ul id="importantInstructionsList">
+                        <li>This Quiz is only for practice purpose.</li>
+                        <li>Submit Quiz within <b>30 Minutes.</b></li>
+                        <li>You can attempt the Quiz any number of times.</li>
+                        <li>There are <b id="numQuestions">{{quiz.numofquestions}} questions</b> in this quiz.</li>
+                        <li>Total Quiz is of <b id="maxMarks">{{quiz.maxmarks}} marks</b>.</li>
+                        <li>Each Question carries <b id="marksPerQuestion">{{quiz.maxmarks/quiz.numofquestions}} marks</b>.</li>
+                        <li>No negative markings for wrong ones.</li>
+                        <li>All Questions are of MCQ Types.</li>
+                    </ul>
+
+                    <mat-divider id="divider2"></mat-divider>
+                    <br>
+                    <h3 id="attemptingQuizHeader">Attempting Quiz</h3>
+                    <ul id="attemptingInstructionsList">
+                        <li>The time will start the moment you click the Start Test.</li>
+                        <li>You cannot resume this quiz, if interrupted due to any reason.</li>
+                        <li>You can attempt the Quiz any number of times.</li>
+                        <li>Scroll down to move to the next Question.</li>
+                        <li>Click on Submit Quiz Button on completion of the Quiz.</li>
+                        <li>Report of the test is automatically generated after submitting the test.</li>
+                    </ul>
+
+                </mat-card-content>
+
+                <mat-card-actions>
+                    <!-- actions -->
+                    <div class="container text-center">
+                        <button (click)="startQuiz()"  mat-raised-button class="startQuizz">Start Quiz</button>
+                    </div>
+                </mat-card-actions>
+
+            </mat-card>
+        </div>
+    </div>
+</div>

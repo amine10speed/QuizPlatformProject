@@ -1,0 +1,118 @@
+/* Autres styles (non modifiés) */
+.container {
+    margin-top: 20px;
+    padding: 0 15px; /* Ajout de padding pour éviter que le contenu touche les bords */
+    height: auto; /* Ajuste la hauteur automatiquement selon le contenu */
+}
+
+.register-card {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+.login-logo {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.register-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(82, 41, 0);
+    margin-bottom: 20px;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.first-last-name-container {
+    display: flex;
+    gap: 10px; /* Ajout d'espace entre les champs */
+}
+
+.first-last-name-container mat-form-field {
+    width: 68%; /* Réduit légèrement la largeur des champs pour mieux gérer l'espace */
+}
+
+.register-btn, .reset-btn {
+    width: 150px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn {
+    background-color: rgb(82, 41, 0);
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #8b4513;
+}
+
+.reset-btn {
+    background-color: #a59175;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #8b4513;
+}
+
+mat-form-field .mat-label {
+    color: rgb(82, 41, 0);
+}
+
+mat-form-field .mat-input-element {
+    color: rgb(82, 41, 0);
+}
+
+.username-hint {
+    color: #8b4513;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+::ng-deep input::placeholder {
+    color: #a59175;
+    font-style: italic;
+    font-size: 12px;
+}
+
+mat-label {
+    color: #a59175;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+mat-form-field input:focus {
+    border-color: rgb(82, 41, 0);
+}
+
+.username-hint {
+    color: #8b4513;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 10px;
+    margin-top: 5px;
+}
+
+.link {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(82, 41, 0);
+}
+
+.link:hover {
+    color: #8b4513;
+}

@@ -1,0 +1,17 @@
+.cover{
+    background-size: 100%;
+}
+.container{
+    padding-top: 70px;
+}
+mat-card-title{
+        font-weight: bold;
+        font-size: 20px;
+        color: #8B4513;
+    }
+
+      .startQuizz{
+        background-color: #a59175;
+        color: white;
+      }
+     

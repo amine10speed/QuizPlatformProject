@@ -1,0 +1,105 @@
+
+.full-width{
+    
+    width: 50%;
+}
+
+
+.container {
+    margin-top: 50px;
+  }
+  
+  .login-card {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-logo {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  object-fit: cover;
+  }
+  
+  .login-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(82, 41, 0);
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .login-btn, .reset-btn {
+    width: 150px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn {
+    background-color: rgb(82, 41, 0);
+    color: white;
+  }
+  
+  .login-btn:hover {
+    background-color: #8b4513;
+  }
+  
+  .reset-btn {
+    background-color: #a59175;
+    color: white;
+  }
+  
+  .reset-btn:hover {
+    background-color: #8b4513;
+  }
+  
+  mat-form-field .mat-label {
+    color: rgb(82, 41, 0);
+  }
+  
+  mat-form-field .mat-input-element {
+    color: rgb(82, 41, 0);
+  }
+  .username-hint {
+    color: #8b4513; 
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 10px;
+    margin-top: 5px;
+  }
+
+  ::ng-deep input::placeholder {
+    color: #a59175; 
+    font-style: italic;
+    font-size: 12px;
+  }
+  mat-label {
+    color: #a59175;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  
+  mat-form-field input:focus {
+    border-color: rgb(82, 41, 0);
+  }
+  
+.link{
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(82, 41, 0);
+  }
+
+  .link:hover{
+    color: #8b4513;
+  }
+

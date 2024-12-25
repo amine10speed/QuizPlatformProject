@@ -1,0 +1,77 @@
+<mat-card *ngIf="user">
+    <div class="mt20 ml20">
+    </div>
+
+    <mat-card-content>
+
+        <div class="container">
+
+
+            <div class="container text-center">
+                <img src="../../../assets/profile.png" height="100px" class="profile-image">
+
+                <h1 class="mt20">{{user.firstname}} {{user.lastname}}</h1>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-10 offset-md-1">
+
+                    <!-- // Table Details -->
+                    <table class="table text-center">
+                        <tr>
+                            <td class="td_profile">Username</td>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <td class="td_profile">Firstname</td>
+                            <td>{{user.firstname}}</td>
+                        </tr>
+                        <tr>
+                            <td class="td_profile">lastname</td>
+                            <td>{{user.lastname}}</td>
+                        </tr>
+                        <tr>
+                            <td class="td_profile">Email</td>
+                            <td>{{user.email}}</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>User Id</td>
+                            <td>{{user.uid}}</td>
+                        </tr> -->
+                        <tr>
+                            <td class="td_profile">Phone No</td>
+                            <td>{{user.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td class="td_profile">Role</td>
+                            <td>{{userrole}}</td>
+                        </tr>
+                        <tr>
+                            <td class="td_profile">Status</td>
+                            <td [ngClass]="{'active-status': user.enabled, 'inactive-status': !user.enabled}">
+                                {{ user.enabled ? "ACTIVE" : "NOT ACTIVE" }}
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    </mat-card-content>
+
+    <!-- <mat-card-actions>
+        <div class="container text-center">
+            <button mat-raised-button color="primary">Update</button>
+            <button class="ml20" mat-raised-button color="accent">Update</button>
+        </div>
+    </mat-card-actions> -->
+
+</mat-card>
+<!--
+{{user | json}}
+{{ userrole | json}}
+-->

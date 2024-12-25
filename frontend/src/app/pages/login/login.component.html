@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <mat-card class="login-card">
+                <div class="container text-center mt20">
+                    <img id="logo" src="../../../assets/logo.jpg" height="100px" class="login-logo">
+                </div>
+                <h1 class="text-center login-title">Login Here !!</h1>
+                <form (ngSubmit)="loginUser()">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input id="username" type="text" matInput name="username" [(ngModel)]="user.username" placeholder="Enter User Name" required>
+                        <mat-hint id="usernameHint" class="username-hint">User Name must be unique !!</mat-hint>
+                    </mat-form-field><br>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input id="password" type="password" matInput name="password" [(ngModel)]="user.password" placeholder="Enter Password" required>
+                    </mat-form-field><br>
+
+                    <div class="container text-center">
+                        <button id="loginButton" type="submit" mat-raised-button color="primary" class="login-btn">Login</button>
+                        <button id="resetButton" type="reset" class="ml20" mat-raised-button color="accent" class="reset-btn">Reset</button>
+                    </div>
+                </form>
+                <div class="container text-center mt20">
+                    <p id="registerPrompt" class="no-account-text">I don't have an account? <a id="registerLink" class="link" href="/signup">Register Here</a></p>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,56 @@
+h1{
+    font-weight: bold;
+    font-size: 20px;
+    color: #8B4513;
+}
+.space_top{
+    margin-top: 30px;
+}
+
+.btn-add {
+    position: absolute;
+    top: 15%; 
+    left: 85%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 9999999;
+  }
+  
+  .btn-add button {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 25px 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  .btn-add a{
+    text-decoration: none;
+    color: white;}
+  .btn-add button:hover {
+    background-color: #8B4513;
+  }
+  .space_top mat-card-content{
+    margin-bottom:50px ;
+  }
+
+  .delete{
+    background-color: brown;
+    color: white;
+  }
+  .quizzes{
+    background-color: #a59175;
+    color: white;
+  }
+  .update{
+    background-color: rgb(223, 126, 0);
+    color: white;
+  }
+  mat-card-title{
+    color: brown ;
+  }
