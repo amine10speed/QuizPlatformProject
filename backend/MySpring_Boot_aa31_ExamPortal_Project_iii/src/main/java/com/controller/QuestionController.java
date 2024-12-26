@@ -29,103 +29,103 @@ import com.service.QuizService;
 @RequestMapping("/question")
 @CrossOrigin(origins="*")
 public class QuestionController {
-
-    @Autowired
-    private QuestionService quesServ;
-
-    @Autowired
-    private QuizService quizServ;
-
-
-    //====== create Question =======================================================================
-    @PostMapping("/create")
-    public ResponseEntity<?> addQuestion(@RequestBody Question question)
-    {
-        return ResponseEntity.ok(this.quesServ.addQuestion(question));
-    }
-
-    //======== update Question =============================================================================
-    @PutMapping("/update")
-    public ResponseEntity<?> upadteQuestion(@RequestBody Question question)
-    {
-        return ResponseEntity.ok(this.quesServ.addQuestion(question));
-    }
-
-    //========= get  Questions by quiz ===============================================================================
-    @GetMapping("/quiz/{quizId}")
-    public ResponseEntity<?> getQuestionsOfQuiz(@PathVariable("quizId") int quizId)
-    {
-
-        // return ResponseEntity.ok(this.quesServ.getQuestionsofQuiz(quizId));
-
-        Quiz quiz = this.quizServ.getQuiz(quizId);
-
-        Set<Question> questions = quiz.getQuestions();
-
-        Set<Question> questionsnew = new HashSet<>();
-
-        List<Question> questionslist = new ArrayList<>(questions);
-
-        questionslist.forEach((q)->{
-            q.setAnswer("");				// we have here empty the answer
-        });								// and this will send blank to user client
-        // so we dont need to use @JsonIgnore
-
-        Collections.shuffle(questionslist);
-
-        Set<Question> questionsset = new HashSet<>(questionslist);
-
-
-        Iterator<Question> itr = questionsset.iterator();
-        int i = 0;
-        while(itr.hasNext())
-        {
-            questionsnew.add(itr.next());
-            i = i+1;
-            if(i == quiz.getNumofquestions())
-                break;
-        }
-
-        return ResponseEntity.ok(questionsnew);
-    }
-
-
-    //========= get Questions by quiz (all questions of specific quiz) ===============================================================================
-    @GetMapping("/all/quiz/{quizId}")
-    public ResponseEntity<?> getAllQuestionsOfQuiz(@PathVariable("quizId") int quizId)
-    {
-
-        // return ResponseEntity.ok(this.quesServ.getQuestionsofQuiz(quizId));
-
-        Quiz quiz = this.quizServ.getQuiz(quizId);
-
-        Set<Question> questions = quiz.getQuestions();
-
-
-        return ResponseEntity.ok(questions);
-    }
-
-    //===========  get single Question by quesid =========================================================================================
-    @GetMapping("/quesid/{quesId}")
-    public ResponseEntity<?> getQuestion(@PathVariable("quesId") int quesId)
-    {
-        return ResponseEntity.ok(this.quesServ.getQuestion(quesId));
-    }
-
-    //=========== delete Question ====================================================================================================
-    @DeleteMapping("/delete/{quesId}")
-    public void delete(@PathVariable("quesId") int quesId) throws Exception
-    {
-        this.quesServ.deleteQuestion(quesId);
-    }
-
-    //============ get all Questions ===========================================================================================
-    @GetMapping("/all")
-    public ResponseEntity<?> getAllQuestions()
-    {
-        return ResponseEntity.ok(this.quesServ.getQuestions());
-    }
-
-
+	
+	@Autowired
+	private QuestionService quesServ;
+	
+	@Autowired
+	private QuizService quizServ;
+	
+	
+//====== create Question =======================================================================
+	@PostMapping("/create")
+	public ResponseEntity<?> addQuestion(@RequestBody Question question)
+	{
+		return ResponseEntity.ok(this.quesServ.addQuestion(question));
+	}
+	
+//======== update Question =============================================================================
+	@PutMapping("/update")
+	public ResponseEntity<?> upadteQuestion(@RequestBody Question question)
+	{
+		return ResponseEntity.ok(this.quesServ.addQuestion(question));
+	}
+	
+//========= get  Questions by quiz ===============================================================================
+	@GetMapping("/quiz/{quizId}")
+	public ResponseEntity<?> getQuestionsOfQuiz(@PathVariable("quizId") int quizId)
+	{
+		
+	  // return ResponseEntity.ok(this.quesServ.getQuestionsofQuiz(quizId));
+	
+		Quiz quiz = this.quizServ.getQuiz(quizId);
+		
+		Set<Question> questions = quiz.getQuestions();
+		
+		Set<Question> questionsnew = new HashSet<>();
+		
+		List<Question> questionslist = new ArrayList<>(questions);
+		
+		questionslist.forEach((q)->{
+			q.setAnswer("");				// we have here empty the answer 
+		});								// and this will send blank to user client
+										// so we dont need to use @JsonIgnore
+		
+		Collections.shuffle(questionslist);
+		
+		Set<Question> questionsset = new HashSet<>(questionslist);
+		
+		
+		Iterator<Question> itr = questionsset.iterator();
+		int i = 0;
+		while(itr.hasNext())
+		{
+			questionsnew.add(itr.next());
+			i = i+1;
+			if(i == quiz.getNumofquestions())
+				break;
+		}
+		
+		return ResponseEntity.ok(questionsnew);
+	}
+	
+	
+//========= get Questions by quiz (all questions of specific quiz) ===============================================================================
+		@GetMapping("/all/quiz/{quizId}")
+		public ResponseEntity<?> getAllQuestionsOfQuiz(@PathVariable("quizId") int quizId)
+		{
+			
+		  // return ResponseEntity.ok(this.quesServ.getQuestionsofQuiz(quizId));
+		
+			Quiz quiz = this.quizServ.getQuiz(quizId);
+			
+			Set<Question> questions = quiz.getQuestions();
+			
+			
+			return ResponseEntity.ok(questions);
+		}	
+	
+//===========  get single Question by quesid =========================================================================================
+	@GetMapping("/quesid/{quesId}")
+	public ResponseEntity<?> getQuestion(@PathVariable("quesId") int quesId)
+	{
+		return ResponseEntity.ok(this.quesServ.getQuestion(quesId));
+	}
+	
+//=========== delete Question ====================================================================================================
+	@DeleteMapping("/delete/{quesId}")
+	public void delete(@PathVariable("quesId") int quesId) throws Exception
+	{
+		this.quesServ.deleteQuestion(quesId);
+	}
+ 	
+//============ get all Questions ===========================================================================================
+	@GetMapping("/all")
+	public ResponseEntity<?> getAllQuestions()
+	{
+		return ResponseEntity.ok(this.quesServ.getQuestions());
+	}
+	
+	
 
 }
